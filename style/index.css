@@ -144,9 +144,9 @@ body > * {
 	justify-content: space-between;
 	margin-bottom: 1%;
 }
-.navName > * {
-	/* border: 1px solid black; */
-}
+/* .navName > * {
+	border: 1px solid black; 
+} */
 #headerName {
 	font-size: 2.5rem;
 }
@@ -235,6 +235,8 @@ body > * {
 }
 .projectBox {
 	border: 1px solid black;
+	border-radius: 20px;
+	overflow: hidden;
 	width: 30%;
 	text-align: center;
 	color: whitesmoke;
@@ -256,6 +258,8 @@ body > * {
 }
 .aboutBox {
 	border: 1px solid black;
+	border-radius: 20px;
+	overflow: hidden;
 	width: 30%;
 	text-align: center;
 	color: whitesmoke;
@@ -281,6 +285,7 @@ footer {
 footer > * {
 	margin: 1% 0;
 }
+/* =============Contact Button================ */
 .footerBtn {
 	border: 1px solid whitesmoke;
 	color: rgb(22, 31, 39);
@@ -293,6 +298,17 @@ footer > * {
 	background-color: rgb(22, 31, 39);
 	box-shadow: 5px -5px 5px white, -5px 5px 5px white;
 }
-footer h5 {
+/* ===============Social Media Icons=========== */
+.footerIcons {
+	display: flex;
+	width: 50%;
+	justify-content: space-between;
+}
+.iconAttribution a {
+	/* text-decoration: none; */
+	color: whitesmoke;
+}
+footer h5,
+.iconAttribution {
 	color: whitesmoke;
 }
