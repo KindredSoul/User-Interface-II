@@ -171,12 +171,14 @@ body > * {
 }
 /* ==================Hero Container============== */
 .heroContainer {
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	text-align: center;
 	font-size: 0.8rem;
 }
 .hero {
 	background-color: rgb(75, 72, 72);
+	border-radius: 10px;
+	overflow: hidden;
 }
 .heroImg {
 	width: 100%;
@@ -193,10 +195,11 @@ body > * {
 	color: whitesmoke;
 }
 /* ================Hero Button==================== */
-.heroImgText a {
+.btn {
 	border: 1px solid black;
 	border-radius: 15px;
 	width: 15%;
+	padding: 0 1%;
 	font-size: 2.5rem;
 	color: whitesmoke;
 	text-decoration: none;
@@ -204,12 +207,92 @@ body > * {
 	transition: 0.8s;
 	box-shadow: -5px -5px 5px black, 5px 5px 5px black;
 }
-.heroImgText a:hover {
+.btn:hover {
 	color: rgb(22, 31, 39);
 	background-color: whitesmoke;
 	box-shadow: -5px 5px 5px black, 5px -5px 5px black;
 }
-/* ==============My Projects Section=============== */
+/* ========================Info Section============================ */
+.infoSection {
+	/* border: 1px solid black; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.infoSection span {
+	font-size: 0.8rem;
+}
+.infoSection span a {
+	color: black;
+	text-decoration: none;
+}
+/* ======================My Projects Section================== */
 .myProjects {
-	margin: 3% 0;
+	/* border: 1px solid black; */
+	margin: 1% 0;
+	display: flex;
+	justify-content: space-between;
+}
+.projectBox {
+	border: 1px solid black;
+	width: 30%;
+	text-align: center;
+	color: whitesmoke;
+	background-color: rgba(22, 31, 39, 0.4);
+}
+.projectBox img {
+	width: 100%;
+}
+.projectBox p {
+	border-top: 1px solid black;
+}
+
+/* =====================About Me Section======================= */
+.aboutMe {
+	/* border: 1px solid black; */
+	margin: 2% 0;
+	display: flex;
+	justify-content: space-between;
+}
+.aboutBox {
+	border: 1px solid black;
+	width: 30%;
+	text-align: center;
+	color: whitesmoke;
+	background-color: rgba(22, 31, 39, 0.4);
+}
+.aboutBox img {
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+}
+.aboutBox p {
+	border-top: 1px solid black;
+}
+/* ==============================Footer============================== */
+footer {
+	background-color: rgb(37, 37, 37);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+footer > * {
+	margin: 1% 0;
+}
+.footerBtn {
+	border: 1px solid whitesmoke;
+	color: rgb(22, 31, 39);
+	background-color: whitesmoke;
+	transition: 0.6s;
+	box-shadow: -5px -5px 5px white, 5px 5px 5px white;
+}
+.footerBtn:hover {
+	color: whitesmoke;
+	background-color: rgb(22, 31, 39);
+	box-shadow: 5px -5px 5px white, -5px 5px 5px white;
+}
+footer h5 {
+	color: whitesmoke;
 }
