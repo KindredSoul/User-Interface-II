@@ -149,6 +149,7 @@ body > * {
 } */
 #headerName {
 	font-size: 2.5rem;
+	border-bottom: 2px double black;
 }
 .navName nav {
 	display: flex;
@@ -223,39 +224,26 @@ body > * {
 	font-size: 0.8rem;
 }
 .infoSection span a {
-	color: black;
+	color: whitesmoke;
 	text-decoration: none;
 }
-/* ======================My Projects Section================== */
-.myProjects {
-	/* border: 1px solid black; */
-	margin: 1% 0;
-	display: flex;
-	justify-content: space-between;
-}
-.projectBox {
-	border: 1px solid black;
-	border-radius: 20px;
-	overflow: hidden;
-	width: 30%;
-	text-align: center;
-	color: whitesmoke;
-	background-color: rgba(22, 31, 39, 0.4);
-}
-.projectBox img {
-	width: 100%;
-}
-.projectBox p {
-	border-top: 1px solid black;
-}
-
-/* =====================About Me Section======================= */
+/* ========================Shared Styles================ */
+.myProjects,
 .aboutMe {
-	/* border: 1px solid black; */
-	margin: 2% 0;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
+	margin: 2.5% 0;
+	/* background-color: rgba(0, 1, 2, 0.65);
+	color: whitesmoke; */
 }
+.sectionTitle {
+	width: 100%;
+	margin-bottom: 1.5%;
+	display: flex;
+	justify-content: center;
+}
+.projectBox,
 .aboutBox {
 	border: 1px solid black;
 	border-radius: 20px;
@@ -263,15 +251,39 @@ body > * {
 	width: 30%;
 	text-align: center;
 	color: whitesmoke;
+	transition: 1s;
 	background-color: rgba(22, 31, 39, 0.4);
 }
+.projectBox:hover,
+.aboutBox:hover {
+	background-color: rgba(22, 31, 39, 0.8);
+}
+.myProjects h3,
+.aboutMe h3 {
+	border: 1px solid black;
+	width: 35%;
+	height: 5vh;
+	font-size: 1.8rem;
+	color: whitesmoke;
+	text-align: center;
+	border-radius: 20px;
+	background-color: rgb(0, 1, 2);
+	box-shadow: 5px 0 15px rgb(0, 1, 2), -5px 0 15px rgb(0, 1, 2);
+}
+.projectBox p,
+.aboutBox p {
+	border-top: 1px solid black;
+}
+/* ======================My Projects Section================== */
+.projectBox img {
+	width: 100%;
+}
+
+/* =====================About Me Section======================= */
 .aboutBox img {
 	width: 100%;
 	height: 400px;
 	overflow: hidden;
-}
-.aboutBox p {
-	border-top: 1px solid black;
 }
 /* ==============================Footer============================== */
 footer {
@@ -299,16 +311,74 @@ footer > * {
 	box-shadow: 5px -5px 5px white, -5px 5px 5px white;
 }
 /* ===============Social Media Icons=========== */
-.footerIcons {
+.modalIcons {
 	display: flex;
-	width: 50%;
 	justify-content: space-between;
 }
+.iconAttribution,
 .iconAttribution a {
 	/* text-decoration: none; */
+	color: rgb(22, 31, 39);
+}
+footer h5 {
 	color: whitesmoke;
 }
-footer h5,
+/* =====================Modal=============================== */
+.modal,
+.modal > a {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.modal {
+	left: -100vw;
+	padding: 0 2em;
+	opacity: 0;
+	transition: left 0s 0.5s, opacity 0.5s;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.modal:target {
+	left: 0;
+	opacity: 1;
+	transition: left 0s, opacity 0.5s;
+}
+
+.modal > a {
+	position: absolute;
+	left: 0;
+}
+
+.modal > div {
+	position: relative;
+	top: -50vh;
+	width: 100%;
+	max-width: 32em;
+	padding: 1em;
+	background: #fff;
+	border-radius: 0.5em;
+	transition: top 0.5s;
+}
+
+.modal:target > div {
+	top: 0;
+}
+
+.modal div h3,
+.modal div p,
+.modalIcons,
 .iconAttribution {
-	color: whitesmoke;
+	margin: 2% 0;
+}
+.modal div h3 {
+	font-size: 2rem;
+}
+.modal div p {
+	font-size: 1.5rem;
 }
