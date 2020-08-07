@@ -145,7 +145,7 @@ body > * {
 	margin-bottom: 1%;
 }
 .navName > * {
-	border: 1px solid black;
+	/* border: 1px solid black; */
 }
 #headerName {
 	font-size: 2.5rem;
@@ -160,6 +160,14 @@ body > * {
 	border: 1px solid black;
 	width: 25%;
 	text-align: center;
+	text-decoration: none;
+	transition: 0.7s;
+	color: rgb(22, 31, 39);
+	background-color: whitesmoke;
+}
+.navName nav a:hover {
+	color: whitesmoke;
+	background-color: rgb(22, 31, 39);
 }
 /* ==================Hero Container============== */
 .heroContainer {
@@ -175,13 +183,33 @@ body > * {
 	height: 90vh;
 	opacity: 0.6;
 }
+/* ==================Center Hero Container======== */
 .heroImgText {
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	position: absolute;
 	top: 30%;
 	left: 25%;
 	font-size: 10rem;
 	color: whitesmoke;
 }
-.heroContainer span {
+/* ================Hero Button==================== */
+.heroImgText a {
+	border: 1px solid black;
+	border-radius: 15px;
+	width: 15%;
+	font-size: 2.5rem;
+	color: whitesmoke;
+	text-decoration: none;
+	background-color: rgba(22, 31, 39, 0.3);
+	transition: 0.8s;
+	box-shadow: -5px -5px 5px black, 5px 5px 5px black;
+}
+.heroImgText a:hover {
+	color: rgb(22, 31, 39);
+	background-color: whitesmoke;
+	box-shadow: -5px 5px 5px black, 5px -5px 5px black;
+}
+/* ==============My Projects Section=============== */
+.myProjects {
+	margin: 3% 0;
 }
