@@ -1,1 +1,591 @@
 /* Add CSS styling here */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ==========================My Styles============================================ */
+body {
+	font-size: 62.5%;
+	box-sizing: border-box;
+	background-color: rgba(2, 2, 236, 0.116);
+}
+body > * {
+	font-size: 1rem;
+	padding: 0 2%;
+	overflow-x: hidden;
+}
+/* =================================Header============================ */
+header {
+	overflow: hidden;
+}
+/* ==============Nav================= */
+.navName {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1.4%;
+}
+/* .navName > * {
+	border: 1px solid black; 
+} */
+#headerName {
+	font-size: 2.5rem;
+	border-bottom: 2px double black;
+}
+.navName nav {
+	display: flex;
+	justify-content: space-evenly;
+	width: 40rem;
+	font-size: 2rem;
+}
+.navName nav a {
+	border: 1px solid black;
+	width: 25%;
+	text-align: center;
+	text-decoration: none;
+	transition: 0.7s;
+	color: rgb(22, 31, 39);
+	background-color: whitesmoke;
+}
+.navName nav a:hover {
+	color: whitesmoke;
+	background-color: rgb(22, 31, 39);
+}
+
+/* ==================Hero Container============== */
+.heroContainer {
+	/* border: 1px solid black; */
+	text-align: center;
+	font-size: 0.8rem;
+}
+.hero {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("Images/heroImg.jpg");
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* ==================Center Hero Container======== */
+.heroImgText {
+	/* border: 1px solid black; */
+	border-radius: 10px;
+	font-size: 10rem;
+	width: 100%;
+	height: 100%;
+	color: whitesmoke;
+	background-color: rgba(0, 0, 0, 0.199);
+}
+.heroImgText #heroName,
+.heroImgText .btn {
+	margin: 10% 0;
+}
+/* ================Hero Button==================== */
+.btn {
+	border: 1px solid black;
+	border-radius: 15px;
+	width: 15%;
+	padding: 0 1%;
+	font-size: 2.5rem;
+	color: whitesmoke;
+	text-decoration: none;
+	background-color: rgba(22, 31, 39, 0.3);
+	transition: 0.8s;
+	box-shadow: -5px -5px 5px black, 5px 5px 5px black;
+}
+.btn:hover {
+	color: rgb(22, 31, 39);
+	background-color: whitesmoke;
+	box-shadow: -5px 5px 5px black, 5px -5px 5px black;
+}
+/* ========================Info Section============================ */
+.infoSection {
+	/* border: 1px solid black; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+}
+.infoSection span {
+	font-size: 0.8rem;
+}
+.infoSection span a {
+	color: whitesmoke;
+	text-decoration: none;
+}
+/* ===============AboutMe & MyProjects Shared Styles================ */
+.myProjects,
+.aboutMe {
+	border-top: 1px solid black;
+	padding-top: 4%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 2.5% 0;
+	/* background-color: rgba(0, 1, 2, 0.65);
+	color: whitesmoke; */
+}
+.sectionTitle {
+	width: 100%;
+	margin-bottom: 1.5%;
+	display: flex;
+	justify-content: center;
+}
+.projectBox,
+.aboutBox {
+	border: 1px solid black;
+	border-radius: 20px;
+	overflow: hidden;
+	width: 30%;
+	text-align: center;
+	color: whitesmoke;
+	transition: 1s;
+	background-color: rgba(22, 31, 39, 0.4);
+}
+.projectBox:hover,
+.aboutBox:hover {
+	background-color: rgba(22, 31, 39, 0.8);
+}
+.myProjects h3,
+.aboutMe h3 {
+	border: 1px solid black;
+	width: 35%;
+	height: 5vh;
+	font-size: 1.8rem;
+	color: whitesmoke;
+	text-align: center;
+	border-radius: 20px;
+	background-color: rgb(0, 1, 2);
+	box-shadow: 5px 0 15px rgb(0, 1, 2), -5px 0 15px rgb(0, 1, 2);
+}
+.projectBox p,
+.aboutBox p {
+	border-top: 1px solid black;
+}
+/* ======================My Projects Section================== */
+.projectBox img {
+	width: 100%;
+}
+
+/* =====================About Me Section======================= */
+.aboutBox img {
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+}
+/* ==============================Footer============================== */
+footer {
+	background-color: rgb(37, 37, 37);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+footer > * {
+	margin: 1% 0;
+}
+/* =============Contact Button================ */
+.footerBtn {
+	border: 1px solid whitesmoke;
+	color: rgb(22, 31, 39);
+	background-color: whitesmoke;
+	transition: 0.6s;
+	box-shadow: -5px -5px 5px white, 5px 5px 5px white;
+}
+.footerBtn:hover {
+	color: whitesmoke;
+	background-color: rgb(22, 31, 39);
+	box-shadow: 5px -5px 5px white, -5px 5px 5px white;
+}
+/* ===============Social Media Icons=========== */
+.modalIcons {
+	display: flex;
+	justify-content: space-between;
+}
+.iconAttribution,
+.iconAttribution a {
+	/* text-decoration: none; */
+	color: rgb(22, 31, 39);
+}
+footer h5 {
+	color: whitesmoke;
+}
+/* =====================Modal=============================== */
+.modal,
+.modal > a {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.modal {
+	left: -100vw;
+	padding: 0 2em;
+	opacity: 0;
+	transition: left 0s 0.5s, opacity 0.5s;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.modal:target {
+	left: 0;
+	opacity: 1;
+	transition: left 0s, opacity 0.5s;
+}
+
+.modal > a {
+	position: absolute;
+	left: 0;
+}
+
+.modal > div {
+	position: relative;
+	top: -50vh;
+	width: 100%;
+	max-width: 32em;
+	padding: 1em;
+	background: #fff;
+	border-radius: 0.5em;
+	transition: top 0.5s;
+}
+
+.modal:target > div {
+	top: 0;
+}
+
+.modal div h3,
+.modal div p,
+.modalIcons,
+.iconAttribution {
+	margin: 2% 0;
+}
+.modal div h3 {
+	font-size: 2rem;
+}
+.modal div p {
+	font-size: 1.5rem;
+}
+/* =====================================Media Queries============================ */
+
+/* =============================Tablets========================== */
+@media (max-width: 800px) {
+	/* =================== Nav ============= */
+	.navName nav {
+		width: 30rem;
+	}
+
+	/* ==================Hero Container============== */
+	.hero {
+		height: 85vh;
+	}
+	/* ==================Center Hero Container======== */
+	.heroImgText {
+		font-size: 6rem;
+	}
+	/* ================Hero Button==================== */
+	.btn {
+		padding: 0.5% 1%;
+		font-size: 2rem;
+	}
+	.infoSection {
+		/* border: 1px solid black; */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.infoSection span {
+		font-size: 0.8rem;
+	}
+	.infoSection span a {
+		color: whitesmoke;
+		text-decoration: none;
+	}
+	/* ===============AboutMe & MyProjects Shared Styles================ */
+	.myProjects h3,
+	.aboutMe h3 {
+		font-size: 1.25rem;
+	}
+	/* =====================About Me Section======================= */
+	.aboutBox img {
+		height: 200px;
+	}
+	/* ==============================Footer============================== */
+	footer {
+		padding-top: 2%;
+	}
+	/* =============Contact Button================ */
+	.footerBtn {
+		width: 30%;
+	}
+}
+/* =================================== Phones ================================= */
+@media (max-width: 500px) {
+	/* =================================Header============================ */
+	/* ==============Nav================= */
+	.navName {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 1%;
+	}
+	#headerName {
+		font-size: 6rem;
+		border-bottom: 2px double black;
+	}
+	.navName nav {
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: column;
+		align-items: center;
+		width: 40rem;
+		font-size: 2rem;
+	}
+	.navName nav a:active {
+		color: whitesmoke;
+		background-color: rgb(22, 31, 39);
+	}
+
+	.navName nav a {
+		transition: 0.1s;
+	}
+
+	/* ==================Hero Container============== */
+	.heroContainer {
+		margin-bottom: 4%;
+	}
+	.hero {
+		border: 1px solid black;
+		background-image: linear-gradient(white, black) url("Images/heroImg.jpg");
+		background-position: center;
+		background-size: cover;
+		border-radius: 10px;
+		height: 55vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	/* ==================Center Hero Container======== */
+	.hero .heroImgText {
+		/* border: 1px solid black; */
+		font-size: 2.5rem;
+		/* padding-top: 20%; */
+		width: 100%;
+		height: 60%;
+		background-color: rgba(0, 0, 0, 0);
+	}
+
+	.heroImgText #heroName {
+		padding: 5% 0;
+	}
+	/* ================Hero Button==================== */
+
+	/* ============================= Info Section======================== */
+	.infoSection {
+		/* border: 1px solid black; */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.infoSection span {
+		display: none;
+	}
+	/*
+	.infoSection span a {
+		color: whitesmoke;
+		text-decoration: none;
+	} 
+	*/
+	/* ===============AboutMe & MyProjects Shared Styles================ */
+	.myProjects,
+	.aboutMe {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-between;
+		align-items: center;
+		margin: 2.5% 0;
+	}
+	.sectionTitle {
+		width: 90%;
+		margin-bottom: 1.5%;
+		display: flex;
+		justify-content: center;
+	}
+	.projectBox,
+	.aboutBox {
+		overflow: hidden;
+		width: 98%;
+		margin: 2% 0;
+		padding: 1%;
+		display: flex;
+		transition: none;
+		background-size: cover;
+		background-position: center;
+	}
+	.projectBox img,
+	.aboutBox img {
+		border: none;
+		display: none;
+	}
+	.myProjects h3,
+	.aboutMe h3 {
+		border: none;
+		width: 80%;
+		font-size: 1.5rem;
+		padding: 1.5% 0;
+	}
+	.projectBox p,
+	.aboutBox p {
+		border-top: none;
+	}
+	/* ======================My Projects Section================== */
+	.projectBox {
+		background-image: linear-gradient(rgba(0, 1, 2, 0.55), rgba(0, 1, 2, 0.75)), url("/style/Images/projectOne.jpg");
+	}
+
+	/* =====================About Me Section======================= */
+	.aboutBox {
+		background-image: linear-gradient(rgba(0, 1, 2, 0.55), rgba(0, 1, 2, 0.75)), url("/style/Images/aboutMe.jpg");
+	}
+	/* ==============================Footer============================== */
+	footer {
+		padding-top: 3%;
+	}
+	/* =============Contact Button================ */
+	.footerBtn {
+		width: 40%;
+	}
+}
