@@ -132,17 +132,22 @@ table {
 body {
 	font-size: 62.5%;
 	box-sizing: border-box;
+	background-color: rgba(2, 2, 236, 0.116);
 }
 body > * {
 	font-size: 1rem;
 	padding: 0 2%;
+	overflow-x: hidden;
 }
 /* =================================Header============================ */
+header {
+	overflow: hidden;
+}
 /* ==============Nav================= */
 .navName {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 1%;
+	margin-bottom: 1.4%;
 }
 /* .navName > * {
 	border: 1px solid black; 
@@ -178,7 +183,7 @@ body > * {
 	font-size: 0.8rem;
 }
 .hero {
-	background-image: url("Images/heroImg.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("Images/heroImg.jpg");
 	background-position: center;
 	background-size: cover;
 	border-radius: 10px;
@@ -226,6 +231,7 @@ body > * {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	overflow: hidden;
 }
 .infoSection span {
 	font-size: 0.8rem;
@@ -237,6 +243,8 @@ body > * {
 /* ===============AboutMe & MyProjects Shared Styles================ */
 .myProjects,
 .aboutMe {
+	border-top: 1px solid black;
+	padding-top: 4%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -442,7 +450,7 @@ footer h5 {
 		width: 30%;
 	}
 }
-/* ============================== Phones ========================= */
+/* =================================== Phones ================================= */
 @media (max-width: 500px) {
 	/* =================================Header============================ */
 	/* ==============Nav================= */
@@ -475,52 +483,109 @@ footer h5 {
 	}
 
 	/* ==================Hero Container============== */
-	/* .heroContainer { 
+	.heroContainer {
+		margin-bottom: 4%;
+	}
+	.hero {
 		border: 1px solid black;
-		text-align: center;
-	font-size: 0.8rem;
-}
-.hero {
-	background-image: url("Images/heroImg.jpg");
-	background-position: center;
-	background-size: cover;
-	border-radius: 10px;
-	height: 90vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-} */
+		background-image: linear-gradient(white, black) url("Images/heroImg.jpg");
+		background-position: center;
+		background-size: cover;
+		border-radius: 10px;
+		height: 55vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
 	/* ==================Center Hero Container======== */
-	/* .heroImgText {
-	border: 1px solid black;
-	border-radius: 10px;
-	font-size: 10rem;
-	width: 100%;
-	height: 100%;
-	color: whitesmoke;
-	background-color: rgba(0, 0, 0, 0.199);
-}
-.heroImgText #heroName,
-.heroImgText .btn {
-	margin: 10% 0;
-} */
+	.hero .heroImgText {
+		/* border: 1px solid black; */
+		font-size: 2.5rem;
+		/* padding-top: 20%; */
+		width: 100%;
+		height: 60%;
+		background-color: rgba(0, 0, 0, 0);
+	}
+
+	.heroImgText #heroName {
+		padding: 5% 0;
+	}
 	/* ================Hero Button==================== */
-	/* .btn {
-	border: 1px solid black;
-	border-radius: 15px;
-	width: 15%;
-	padding: 0 1%;
-	font-size: 2.5rem;
-	color: whitesmoke;
-	text-decoration: none;
-	background-color: rgba(22, 31, 39, 0.3);
-	transition: 0.8s;
-	box-shadow: -5px -5px 5px black, 5px 5px 5px black;
-}
-.btn:hover {
-	color: rgb(22, 31, 39);
-	background-color: whitesmoke;
-	box-shadow: -5px 5px 5px black, 5px -5px 5px black;
-} */
+
+	/* ============================= Info Section======================== */
+	.infoSection {
+		/* border: 1px solid black; */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.infoSection span {
+		display: none;
+	}
+	/*
+	.infoSection span a {
+		color: whitesmoke;
+		text-decoration: none;
+	} 
+	*/
+	/* ===============AboutMe & MyProjects Shared Styles================ */
+	.myProjects,
+	.aboutMe {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-between;
+		align-items: center;
+		margin: 2.5% 0;
+	}
+	.sectionTitle {
+		width: 90%;
+		margin-bottom: 1.5%;
+		display: flex;
+		justify-content: center;
+	}
+	.projectBox,
+	.aboutBox {
+		overflow: hidden;
+		width: 98%;
+		margin: 2% 0;
+		padding: 1%;
+		display: flex;
+		transition: none;
+		background-size: cover;
+		background-position: center;
+	}
+	.projectBox img,
+	.aboutBox img {
+		border: none;
+		display: none;
+	}
+	.myProjects h3,
+	.aboutMe h3 {
+		border: none;
+		width: 80%;
+		font-size: 1.5rem;
+		padding: 1.5% 0;
+	}
+	.projectBox p,
+	.aboutBox p {
+		border-top: none;
+	}
+	/* ======================My Projects Section================== */
+	.projectBox {
+		background-image: linear-gradient(rgba(0, 1, 2, 0.55), rgba(0, 1, 2, 0.75)), url("/style/Images/projectOne.jpg");
+	}
+
+	/* =====================About Me Section======================= */
+	.aboutBox {
+		background-image: linear-gradient(rgba(0, 1, 2, 0.55), rgba(0, 1, 2, 0.75)), url("/style/Images/aboutMe.jpg");
+	}
+	/* ==============================Footer============================== */
+	footer {
+		padding-top: 3%;
+	}
+	/* =============Contact Button================ */
+	.footerBtn {
+		width: 40%;
+	}
 }
